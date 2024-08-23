@@ -27,8 +27,8 @@ public abstract class BaseSetup {
     private static WebDriver driver;
 
     public BaseSetup(){
-        String configFilePath = System.getProperty("user.dir")+"src/test/java/resources/config/dev-config.properties";
-
+        String configFilePath = System.getProperty("user.dir")+"/src/test/resources/configs/dev-config.properties";
+      ///src/test/resources/configs/dev-config.properties
         try{
             LOGGER.debug("Reading config file {}", configFilePath);
             InputStream inputStream = new FileInputStream(configFilePath);

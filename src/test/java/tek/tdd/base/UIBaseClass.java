@@ -12,7 +12,7 @@ import org.testng.annotations.*;
 import tek.tdd.pages.AccountProfilePage;
 import tek.tdd.pages.HomePage;
 import tek.tdd.pages.SignUpPage;
-import tek.tdd.pages.SingInPage;
+import tek.tdd.pages.SignInPage;
 import tek.tdd.utility.SeleniumUtility;
 
 @Listeners({ExtentIReporterSuiteListenerAdapter.class})
@@ -23,7 +23,7 @@ public class UIBaseClass extends SeleniumUtility {
     public HomePage homePage;
     public AccountProfilePage accountProfilePage;
     public SignUpPage signUpPage;
-    public SingInPage signInPage;
+    public SignInPage signInPage;
 
     @BeforeMethod
     public void setupTest(){
@@ -32,7 +32,7 @@ public class UIBaseClass extends SeleniumUtility {
         homePage = new HomePage();
         accountProfilePage = new AccountProfilePage();
         signUpPage = new SignUpPage();
-        signInPage = new SingInPage();
+        signInPage = new SignInPage();
     }
 
     public void testCleanUp(ITestResult result){

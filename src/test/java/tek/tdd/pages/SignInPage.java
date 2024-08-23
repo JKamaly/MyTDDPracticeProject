@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import tek.tdd.utility.SeleniumUtility;
 
-public class SingInPage extends SeleniumUtility {
+public class SignInPage extends SeleniumUtility {
 
-    public SingInPage(){
+    public SignInPage(){
         PageFactory.initElements(getDriver(), this);
     }
 
@@ -23,6 +23,12 @@ public class SingInPage extends SeleniumUtility {
 
     @FindBy(id="loginBtn")
     public WebElement loginButton;
+
+    @FindBy(className = "error")
+    public WebElement errorMessage;
+
+    @FindBy(linkText = "Create New Account")
+    public WebElement createNewAccountLink;
 
 
     public void doSignIn(String email, String password){
